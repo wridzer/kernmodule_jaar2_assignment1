@@ -2,12 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class IDamageble : MonoBehaviour
+public interface IDamageble
 {
-    public float Health { get; private set; }
-
-    public virtual void TakeDamage(float _damage)
-    {
-        Health -= _damage;
-    }
+    float Health { get; set; }
+    void TakeDamage(float _damage);
 }

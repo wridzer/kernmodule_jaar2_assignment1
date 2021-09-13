@@ -22,14 +22,14 @@ public class Bullet : MonoBehaviour
             {
                 hitInfo.collider.GetComponent<IDamageble>().TakeDamage(damage);
             }
-            GameObject.Destroy(this);
+            Destroy(gameObject);
         }
         else
         {
             life -= Time.deltaTime;
             if (life <= 0)
             {
-                GameObject.Destroy(this);
+                Destroy(gameObject);
             }
             transform.Translate(transform.forward * speed * Time.deltaTime, Space.World);
         }
